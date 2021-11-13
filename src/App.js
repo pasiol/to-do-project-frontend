@@ -47,14 +47,12 @@ const App = () => {
             </Row>
             <Row className=".px-2,b-2" >
                 <Col>
-                    <TodoForm saveTodo={saveTodo} setTask={setTask} task={task}/>
+                    <Row><TodoForm saveTodo={saveTodo} setTask={setTask} task={task}/></Row>
+                    <Row><TodoList todoList={todos} /></Row>
                 </Col>
                 <Col>
                     <DailyImage />
                 </Col>
-            </Row>
-            <Row>
-                <TodoList todoList={todos} />
             </Row>
             <Row>
                 <Footer />
