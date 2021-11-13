@@ -1,17 +1,22 @@
 import React from "react";
-import {Container, Row} from "react-bootstrap";
+import {Table} from "react-bootstrap";
 import Todo from "./Todo";
 
 const TodoList = ({todoList}) => {
     if (todoList!==null) {
         return (
-            <Container>
+            <Table striped hover>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                    </tr>
+                </thead>
                 {todoList.map((t, id) => (
-                    <Row key={id}>
+                    <tr key={id}>
                         <Todo id={id} todo={t}/>
-                    </Row>
+                    </tr>
                 ))}
-            </Container>
+            </Table>
         );
     } else {
         return (

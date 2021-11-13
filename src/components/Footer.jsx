@@ -4,7 +4,9 @@ import {Container} from "react-bootstrap";
 const Footer = () => {
     return (
         <Container>
-            <strong>DevOps with Kubernetes</strong>
+            <p className="text-center">
+                <blockquote>DevOps with Kubernetes Course Exercise</blockquote>
+            </p>
         </Container>
     );
 };

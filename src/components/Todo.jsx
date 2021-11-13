@@ -1,11 +1,11 @@
 import React from "react";
-import {Card} from "react-bootstrap";
+import {} from "react-bootstrap";
 
 const Todo = ({todo}) => {
     return (
-        <Card>
-            <Card.Body>{todo.task}</Card.Body>
-        </Card>
+        <td width="100%">
+            {todo.task}
+        </td>
     );
 };
 

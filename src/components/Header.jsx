@@ -3,8 +3,8 @@ import {Container} from "react-bootstrap";
 
 const Header = () => {
     return (
-        <Container>
-            <h1>todo-project</h1>
+        <Container fluid="sm">
+            <h1 className="text-center">todo-project</h1>
         </Container>
     );
 };
