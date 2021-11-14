@@ -1,6 +1,7 @@
 import axios from "axios";
+import config from "../config";
 
-const url = process.env.REACT_APP_API_URL+"/todos";
+const url = config.api_url+"/todos";
 
 const getTodos = () => {
     console.log(url);
