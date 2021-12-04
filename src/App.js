@@ -21,7 +21,8 @@ const App = () => {
                 setTodos([]);
             }
         }).catch(error =>{
-            console.log("useEffect error: ", error.response.data);
+            setTodos([]);
+            console.log("useEffect error: ", error);
         });
     }, []);
 
