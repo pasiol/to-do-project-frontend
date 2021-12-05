@@ -3,9 +3,14 @@ import {} from "react-bootstrap";
 
 const Todo = ({todo}) => {
     return (
-        <td width="100%">
-            {todo.task}
-        </td>
+        <>
+            <td>
+                {todo.task}
+            </td>
+            <td>
+                {todo.id}
+            </td>
+        </>
     );
 };
 
