@@ -2,7 +2,7 @@ import React from "react";
 import {Table} from "react-bootstrap";
 import Todo from "./Todo";
 
-const TodoList = ({todoList}) => {
+const TodoList = ({todoList, markDone}) => {
     if (todoList!==null) {
         return (
             <Table striped hover>
@@ -11,11 +11,13 @@ const TodoList = ({todoList}) => {
                         <th>Task</th>
                     </tr>
                 </thead>
-                {todoList.map((t, id) => (
-                    <tr key={id}>
-                        <Todo id={id} todo={t}/>
-                    </tr>
-                ))}
+                <tbody>
+                    {todoList.map((t, id) => (
+                        <tr key={id}>
+                            <Todo id={id} todo={t} markDone={markDone}/>
+                        </tr>
+                    ))}
+                </tbody>
             </Table>
         );
     } else {

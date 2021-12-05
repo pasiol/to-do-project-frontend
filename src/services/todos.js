@@ -20,5 +20,12 @@ const postTodo = async (task) => {
     return response.data;
 };
 
-export default {getTodos, postTodo, getAsyncTodos};
+const putTodo = async (id) => {
+    console.log("put task:", id);
+    let doneUrl = url + "/" + id;
+    const response = await axios.put(doneUrl);
+    return response.data;
+};
+
+export default {getTodos, postTodo, getAsyncTodos, putTodo};
 

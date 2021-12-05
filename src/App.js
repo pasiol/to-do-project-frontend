@@ -41,6 +41,17 @@ const App = () => {
         }
     };
 
+    const markDone = async(id) => {
+        console.log("got id: ", id);
+        try {
+            await todoService.putTodo(id);
+            const newTodoList =  await todoService.getAsyncTodos();
+            setTodos(newTodoList);
+        } catch (error) {
+            console.log("mark task to done failed: ", error.error);
+        }
+    };
+
     return (
         <Container>
             <Row>
@@ -49,7 +60,7 @@ const App = () => {
             <Row className=".px-2,b-2" >
                 <Col>
                     <Row><TodoForm saveTodo={saveTodo} setTask={setTask} task={task}/></Row>
-                    <Row><TodoList todoList={todos} /></Row>
+                    <Row><TodoList todoList={todos} markDone={markDone}/></Row>
                 </Col>
                 <Col>
                     <DailyImage />
